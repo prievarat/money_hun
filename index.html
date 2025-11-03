@@ -928,14 +928,14 @@
             obligatory: [
                 { id: "insurance", title: "Lakásbiztosítás", message: "Esedékes a havi lakásbiztosítási díj.", type: "obligatory", amount: 4000, dayOfMonth: 1,
                     choices: [
-                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 0, well_being: 10 }, action: null },
+                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 0, well_being: 5 }, action: null },
                         { id: "later", text: "Fizetés később", effects: { money_multiplier: 0, social: 0, well_being: -2 }, action: "defer" },
                         { id: "deny", text: "Nem fizetem ki", effects: { money_multiplier: 0, social: 0, well_being: -8 }, action: "add_to_debt" }
                     ]
                 },
                 { id: "bkk_pass", title: "Havi bérletek", message: "Itt az ideje megvenni a bérleteket a munkába és iskolába járáshoz.", type: "obligatory", amount: 26000, dayOfMonth: 1,
                     choices: [
-                        { id: "pay", text: "Bérletvásárlás", effects: { money_multiplier: -1, social: 8, well_being: 8 }, action: null },
+                        { id: "pay", text: "Bérletvásárlás", effects: { money_multiplier: -1, social: 2, well_being: 3 }, action: null },
                         { id: "later", text: "Várok pár napot", effects: { money_multiplier: 0, social: -6, well_being: -10 }, action: "defer" },
                         { id: "deny", text: "Nem veszek (jegyek)", effects: { money_multiplier: 0, social: -16, well_being: -20 }, action: "add_to_debt" }
                     ]
@@ -949,28 +949,28 @@
                 },
                 { id: "rent", title: "Albérlet", message: "Telefonált a főbérlő - ideje fizetni a lakbért.", type: "obligatory", amount: 220000, dayOfMonth: 5,
                     choices: [
-                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 10, well_being: 20 }, action: null },
+                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 5, well_being: 8 }, action: null },
                         { id: "later", text: "Fizetés később", effects: { money_multiplier: 0, social: -6, well_being: -10 }, action: "defer" },
                         { id: "deny", text: "Nem fizetem ki", effects: { money_multiplier: 0, social: -20, well_being: -30 }, action: "add_to_debt" }
                     ]
                 },
                 { id: "common_cost", title: "Közös költség", message: "Megjött a havi közös költség csekkje.", type: "obligatory", amount: 21000, dayOfMonth: 10,
                     choices: [
-                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 4, well_being: 4 }, action: null },
+                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 2, well_being: 2 }, action: null },
                         { id: "later", text: "Fizetés később", effects: { money_multiplier: 0, social: -6, well_being: -6 }, action: "defer" },
                         { id: "deny", text: "Nem fizetem ki", effects: { money_multiplier: 0, social: -16, well_being: -16 }, action: "add_to_debt" }
                     ]
                 },
                 { id: "menza", title: "Iskolai ebéd (Menza)", message: "Az iskola kéri a befizetést mindkét gyerek havi étkezésére.", type: "obligatory", amount: 25000, dayOfMonth: 10,
                     choices: [
-                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 10, well_being: 6 }, action: null },
+                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 5, well_being: 3 }, action: null },
                         { id: "later", text: "Fizetés később", effects: { money_multiplier: 0, social: -10, well_being: -10 }, action: "defer" },
                         { id: "deny", text: "Nem fizetem ki", effects: { money_multiplier: 0, social: -30, well_being: -20 }, action: "add_to_debt" }
                     ]
                 },
                 { id: "car_insurance", title: "Kötelező biztosítás (KGFB)", message: "Esedékes az autó kötelező biztosításának havi részlete.", type: "obligatory", amount: 5000, dayOfMonth: 12,
                     choices: [
-                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 0, well_being: 6 }, action: null },
+                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 0, well_being: 2 }, action: null },
                         { id: "later", text: "Fizetés később", effects: { money_multiplier: 0, social: -2, well_being: -4 }, action: "defer" },
                         { id: "deny", text: "Nem fizetem (Büntetés)", effects: { money_multiplier: 0, social: -20, well_being: -20 }, action: "add_to_debt" }
                     ]
@@ -984,35 +984,35 @@
                 },
                 { id: "water", title: "Vízszámla", message: "Megjött a havi vízdíj számla.", type: "obligatory", amount: 3000, dayOfMonth: 15,
                     choices: [
-                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 2, well_being: 6 }, action: null },
+                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 2, well_being: 3 }, action: null },
                         { id: "later", text: "Fizetés később", effects: { money_multiplier: 0, social: -2, well_being: -6 }, action: "defer" },
                         { id: "deny", text: "Nem fizetem ki", effects: { money_multiplier: 0, social: -8, well_being: -16 }, action: "add_to_debt" }
                     ]
                 },
                 { id: "internet", title: "Internet számla", message: "Esedékes az internet számla. A gyerekek nem tudnak tanulni nélküle.", type: "obligatory", amount: 8000, dayOfMonth: 15,
                     choices: [
-                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 6, well_being: 8 }, action: null },
+                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 4, well_being: 5 }, action: null },
                         { id: "later", text: "Fizetés később", effects: { money_multiplier: 0, social: -4, well_being: -8 }, action: "defer" },
                         { id: "deny", text: "Nem fizetem ki", effects: { money_multiplier: 0, social: -20, well_being: -20 }, action: "add_to_debt" }
                     ]
                 },
                 { id: "electricity", title: "Villanyszámla", message: "Megjött a villanyszámla.", type: "obligatory", amount: 22000, dayOfMonth: 18,
                     choices: [
-                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 2, well_being: 6 }, action: null },
+                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 2, well_being: 3 }, action: null },
                         { id: "later", text: "Fizetés később", effects: { money_multiplier: 0, social: -2, well_being: -10 }, action: "defer" },
                         { id: "deny", text: "Nem fizetem ki", effects: { money_multiplier: 0, social: -10, well_being: -20 }, action: "add_to_debt" }
                     ]
                 },
                 { id: "gas", title: "Gázszámla", message: "Megjött a gázszámla (fűtés, melegvíz, főzés).", type: "obligatory", amount: 25000, dayOfMonth: 20,
                     choices: [
-                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 2, well_being: 10 }, action: null },
+                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 2, well_being: 5 }, action: null },
                         { id: "later", text: "Fizetés később", effects: { money_multiplier: 0, social: -4, well_being: -12 }, action: "defer" },
                         { id: "deny", text: "Nem fizetem ki", effects: { money_multiplier: 0, social: -12, well_being: -30 }, action: "add_to_debt" }
                     ]
                 },
                 { id: "mobile", title: "Telefonszámlák", message: "Megjött a család mobilszámlája.", type: "obligatory", amount: 18000, dayOfMonth: 22,
                     choices: [
-                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 6, well_being: 4 }, action: null },
+                        { id: "pay", text: "Fizetés most", effects: { money_multiplier: -1, social: 3, well_being: 2 }, action: null },
                         { id: "later", text: "Fizetés később", effects: { money_multiplier: 0, social: -6, well_being: -6 }, action: "defer" },
                         { id: "deny", text: "Nem fizetem ki", effects: { money_multiplier: 0, social: -20, well_being: -16 }, action: "add_to_debt" }
                     ]
